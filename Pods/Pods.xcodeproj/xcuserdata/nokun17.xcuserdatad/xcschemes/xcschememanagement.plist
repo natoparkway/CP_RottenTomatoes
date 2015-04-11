@@ -4,20 +4,35 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Rotten Tomatoes.xcscheme_^#shared#^_</key>
+		<key>Pods-AFNetworking.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0FBF33D11AD63F2700409AAD</key>
+		<key>206F305EEF508CABC390EE18</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0FBF33E61AD63F2700409AAD</key>
+		<key>973BB76DB1E37A0C2F4B437C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D1D01FD67A3AE1605ACCECFD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
