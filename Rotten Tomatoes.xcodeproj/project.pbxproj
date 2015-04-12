@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F0BB7B11AD9CF030066B188 /* iconmonstr-error-3-icon-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F0BB7B01AD9CF030066B188 /* iconmonstr-error-3-icon-24.png */; };
 		0F2F03B41AD7961B00C0435F /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2F03B31AD7961B00C0435F /* MovieDetailsViewController.swift */; };
 		0F4D00C11AD7915A00C7F98E /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4D00C01AD7915A00C7F98E /* MovieCell.swift */; };
 		0FBF33D81AD63F2700409AAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBF33D71AD63F2700409AAD /* AppDelegate.swift */; };
@@ -30,7 +29,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F0BB7B01AD9CF030066B188 /* iconmonstr-error-3-icon-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iconmonstr-error-3-icon-24.png"; path = "../../../../../Downloads/iconmonstr-error-3-icon-24.png"; sourceTree = "<group>"; };
 		0F2F03B01AD7930500C0435F /* Rotten Tomatoes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rotten Tomatoes-Bridging-Header.h"; sourceTree = "<group>"; };
 		0F2F03B31AD7961B00C0435F /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		0F4D00C01AD7915A00C7F98E /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
@@ -94,7 +92,6 @@
 				0F4D00C01AD7915A00C7F98E /* MovieCell.swift */,
 				0FBF33D71AD63F2700409AAD /* AppDelegate.swift */,
 				0FBF33DB1AD63F2700409AAD /* Main.storyboard */,
-				0F0BB7B01AD9CF030066B188 /* iconmonstr-error-3-icon-24.png */,
 				0FBF33DE1AD63F2700409AAD /* Images.xcassets */,
 				0FBF33E01AD63F2700409AAD /* LaunchScreen.xib */,
 				0FBF33D51AD63F2700409AAD /* Supporting Files */,
@@ -230,7 +227,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FBF33DD1AD63F2700409AAD /* Main.storyboard in Resources */,
-				0F0BB7B11AD9CF030066B188 /* iconmonstr-error-3-icon-24.png in Resources */,
 				0FBF33E21AD63F2700409AAD /* LaunchScreen.xib in Resources */,
 				0FBF33DF1AD63F2700409AAD /* Images.xcassets in Resources */,
 			);

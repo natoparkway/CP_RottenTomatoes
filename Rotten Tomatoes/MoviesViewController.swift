@@ -12,12 +12,13 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     var movies: [NSDictionary]! = []
     var filteredData: [NSDictionary]! = []  //Used for search
-    let apiURL = "http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/top_rentals.json?apikey=dagqdghwaq3e3mxyrp7kmmj5&limit=10&country=us"
+    let apiURL = "http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/top_rentals.json?apikey=dagqdghwaq3e3mxyrp7kmmj5&limit=50&country=us"
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     var refreshControl: UIRefreshControl!
     
+    @IBOutlet weak var errorLabel: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,7 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let dummyTableVC = UITableViewController()
         dummyTableVC.tableView = tableView
         dummyTableVC.refreshControl = refreshControl
+        errorLabel.frame.origin.y = 108 //Quick fix for error label positioning.
         
         getRottenTomatoesData()
         
@@ -38,6 +40,10 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func onTap(sender: AnyObject) {
+        view.endEditing(true)
+    }
+
     func getRottenTomatoesData() {
         SVProgressHUD.show()
         var url = NSURL(string: apiURL)!
@@ -107,7 +113,6 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        println("hey")
         var movieDetailsViewController = segue.destinationViewController as! MovieDetailsViewController
         var indexPath = tableView.indexPathForCell(sender as! UITableViewCell)!
         
