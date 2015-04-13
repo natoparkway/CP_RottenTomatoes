@@ -16,9 +16,13 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var moviePhoto: UIImageView!
-
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var movieInfoView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var heightOffset = movieInfoView.frame.size.height - synopsisLabel.frame.size.height
         
         titleLabel.text = movie["title"] as? String
         synopsisLabel.text = movie["synopsis"] as? String
@@ -26,7 +30,11 @@ class MovieDetailsViewController: UIViewController {
         yearLabel.text = String(year!)
         ratingLabel.text = movie["mpaa_rating"] as? String
         titleLabel.adjustsFontSizeToFitWidth = true
-        synopsisLabel.adjustsFontSizeToFitWidth = true
+        synopsisLabel.sizeToFit()
+        //synopsisLabel.adjustsFontSizeToFitWidth = true
+        println(synopsisLabel.frame.size)
+        scrollView.contentSize = synopsisLabel.frame.size
+        scrollView.contentSize.height += heightOffset
         
         addPhoto()
 
