@@ -43,6 +43,24 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBAction func onTap(sender: AnyObject) {
         view.endEditing(true)
     }
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        var headerView = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 20))
+        headerView.backgroundColor = UIColor(red: 0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1)
+        
+        var movie = movies[section]
+        var title = movie["title"] as! String
+        
+        var usernameLabel = UILabel(frame: CGRect(x: 5, y: 0, width: 250, height: 20))
+        usernameLabel.text = title;
+
+        
+        usernameLabel.font = UIFont.boldSystemFontOfSize(15)
+        usernameLabel.textColor = UIColor(red: 255/255.0, green: 255/255.0, blue: 255/255.0, alpha: 1)
+        headerView.addSubview(usernameLabel)
+        
+        return headerView;
+    }
 
     func getRottenTomatoesData() {
         SVProgressHUD.show()
@@ -51,7 +69,7 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
         var request = NSURLRequest(URL: url)
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
             
-            //self.errorLabel.hidden = error == nil   //Indicate there was an error
+            self.errorLabel.hidden = error == nil   //Indicate there was an error
             
             var moviesJSON = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as! NSDictionary
             
@@ -64,20 +82,27 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return filteredData.count
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 20
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var movieCell = tableView.dequeueReusableCellWithIdentifier("movieCell", forIndexPath: indexPath) as! MovieCell
         
-        let movieInfo = filteredData[indexPath.row]
+        let movieInfo = filteredData[indexPath.section]
         let url_str = movieInfo.valueForKeyPath("posters.thumbnail") as! String
         let url = NSURL(string: url_str)
         
         movieCell.thumbnail.setImageWithURL(url)
         movieCell.movieSynposis.text = movieInfo["synopsis"] as? String
-        movieCell.movieTitle.text = movieInfo["title"] as? String
         
         return movieCell
     }
@@ -116,7 +141,7 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
         var movieDetailsViewController = segue.destinationViewController as! MovieDetailsViewController
         var indexPath = tableView.indexPathForCell(sender as! UITableViewCell)!
         
-        movieDetailsViewController.movie = movies[indexPath.row]
+        movieDetailsViewController.movie = movies[indexPath.section]
         
         
         

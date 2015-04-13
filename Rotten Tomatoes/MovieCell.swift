@@ -11,8 +11,6 @@ import UIKit
 class MovieCell: UITableViewCell {
 
     @IBOutlet weak var thumbnail: UIImageView!
-    
-    @IBOutlet weak var movieTitle: UILabel!
     @IBOutlet weak var movieSynposis: UILabel!
     
     
