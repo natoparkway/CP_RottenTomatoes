@@ -47,7 +47,7 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
         var headerView = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 20))
         headerView.backgroundColor = UIColor(red: 0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1)
         
-        var movie = movies[section]
+        var movie = filteredData[section]
         var title = movie["title"] as! String
         
         var usernameLabel = UILabel(frame: CGRect(x: 5, y: 0, width: 320, height: 20))
