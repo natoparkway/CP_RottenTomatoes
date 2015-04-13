@@ -26,7 +26,7 @@
                                     </connections>
                                 </searchBar>
                                 <prototypes>
-                                    <tableViewCell alpha="0.89999999999999991" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="134" id="HSh-DU-0BE" customClass="MovieCell" customModule="Rotten_Tomatoes" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="134" id="HSh-DU-0BE" customClass="MovieCell" customModule="Rotten_Tomatoes" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="130" width="320" height="134"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HSh-DU-0BE" id="hOT-38-gIN">
@@ -45,9 +45,14 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="highlightedColor" red="1" green="0.99293851720000004" blue="0.99611767510000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" id="zfO-Xl-ORf">
+                                                    <rect key="frame" x="0.0" y="132" width="319" height="1"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.076803188131313149" green="0.076803188131313149" blue="0.076803188131313149" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="movieSynposis" destination="TBz-ml-1I1" id="EGP-W1-5Pi"/>
                                             <outlet property="thumbnail" destination="0EA-cp-38o" id="WDP-kz-li7"/>
