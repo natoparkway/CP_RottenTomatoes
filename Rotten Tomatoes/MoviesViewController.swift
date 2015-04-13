@@ -17,7 +17,6 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     var refreshControl: UIRefreshControl!
-    
     @IBOutlet weak var errorLabel: UIView!
     
     override func viewDidLoad() {
@@ -51,7 +50,7 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
         var movie = movies[section]
         var title = movie["title"] as! String
         
-        var usernameLabel = UILabel(frame: CGRect(x: 5, y: 0, width: 250, height: 20))
+        var usernameLabel = UILabel(frame: CGRect(x: 5, y: 0, width: 320, height: 20))
         usernameLabel.text = title;
 
         

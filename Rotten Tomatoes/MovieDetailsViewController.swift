@@ -15,6 +15,7 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var synopsisLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var navBarTitleLabel: UILabel!
     @IBOutlet weak var moviePhoto: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var movieInfoView: UIView!
@@ -24,6 +25,7 @@ class MovieDetailsViewController: UIViewController {
         
         var heightOffset = movieInfoView.frame.size.height - synopsisLabel.frame.size.height
         
+        navBarTitleLabel.text = movie["title"] as? String
         titleLabel.text = movie["title"] as? String
         synopsisLabel.text = movie["synopsis"] as? String
         var year = movie["year"] as? Int

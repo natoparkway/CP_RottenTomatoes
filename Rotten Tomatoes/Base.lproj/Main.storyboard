@@ -84,7 +84,22 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                     </view>
-                    <navigationItem key="navigationItem" id="Eg2-FB-VYR"/>
+                    <navigationItem key="navigationItem" id="Eg2-FB-VYR">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="n0q-wV-sLd">
+                            <rect key="frame" x="96" y="6" width="128" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ssa-wB-H4j">
+                                    <rect key="frame" x="-90" y="6" width="309" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
+                                    <color key="textColor" red="0.51030927835051543" green="0.020618556701030966" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </view>
+                    </navigationItem>
                     <connections>
                         <outlet property="errorLabel" destination="GGT-6Z-LZl" id="cdf-lM-CDL"/>
                         <outlet property="searchBar" destination="oxX-Ya-qcH" id="1bh-lX-yRG"/>
@@ -98,7 +113,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="297" y="335"/>
+            <point key="canvasLocation" x="197" y="293"/>
         </scene>
         <!--Movie Details View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -157,10 +172,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0de-oV-zqp"/>
+                    <navigationItem key="navigationItem" id="0de-oV-zqp">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="82T-jI-W91">
+                            <rect key="frame" x="8" y="6" width="304" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yzC-B9-V2V">
+                                    <rect key="frame" x="-1" y="0.0" width="307" height="33"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                    <color key="textColor" red="0.51030927839999995" green="0.020618556699999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </label>
+                            </subviews>
+                        </view>
+                    </navigationItem>
                     <connections>
                         <outlet property="movieInfoView" destination="Qyp-NI-ler" id="oTK-gV-4r2"/>
                         <outlet property="moviePhoto" destination="QXo-gR-hFx" id="G8R-KQ-A0P"/>
+                        <outlet property="navBarTitleLabel" destination="yzC-B9-V2V" id="qJ3-pY-F6U"/>
                         <outlet property="ratingLabel" destination="A3G-mV-HlS" id="x30-CZ-haz"/>
                         <outlet property="scrollView" destination="2WW-Wf-h7i" id="0u2-L8-aIM"/>
                         <outlet property="synopsisLabel" destination="MTZ-ba-77K" id="SsP-4t-MQv"/>
@@ -170,7 +201,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="948" y="335"/>
+            <point key="canvasLocation" x="760" y="293"/>
         </scene>
         <!--Item-->
         <scene sceneID="LaD-A6-w4e">
@@ -190,7 +221,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OeP-ue-yzp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-235" y="335"/>
+            <point key="canvasLocation" x="-266" y="293"/>
         </scene>
     </scenes>
     <resources>
