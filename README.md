@@ -26,7 +26,7 @@ Time spent: `<Number of hours spent>`
 - [x] Scrolling movie synopsis
 
 ### Walkthrough
-![Video Walkthrough](rt_gif.gif)
+![Video Walkthrough](rotten_tomatoes_gif.gif)
 
 Credits
 ---------
